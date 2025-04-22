@@ -1,0 +1,54 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+$primary-color: #1d12b3;
+$star-color: orange;
+$font-size: 14px;
+$bgColor: #3b2b92;
+$iconColor: #f155ff;
+$iconColorHover: #f47bff;
+
+.checkedStar {
+  color: $star-color;
+}
+
+.text-prime {
+  color: $primary-color;
+}
+
+.btn-outline {
+  outline-color: $primary-color;
+}
+
+.fs14 {
+  font-size: $font-size;
+}
+
+.bgColor {
+  background-color: $bgColor;
+}
+
+.iconColor {
+  color: $iconColor;
+}
+
+.iconColorHover:hover {
+  background-color: $iconColorHover;
+}
+
+.iconColorHover {
+  background-color: lightgray;
+}
+
+.kt-pointer {
+  cursor: pointer
+}
