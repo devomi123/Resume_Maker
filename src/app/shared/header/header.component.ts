@@ -16,7 +16,7 @@ export class HeaderComponent {
   ngOnInit() {}
 
   addAccount(){
-    this.router.navigate(["/my-account"]);
+    this.router.navigate(["/innerpage/my-account"]);
 
   }
 }
