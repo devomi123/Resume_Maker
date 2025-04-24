@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './shared/header/header.component';
 import { DashboardAddResumeComponent } from './view/dashboard-add-resume/dashboard-add-resume.component';
 import { CreateOptionComponent } from './view/create-option/create-option.component';
@@ -14,7 +14,8 @@ import { FooterComponent } from './shared/footer/footer.component';
     UeserNetworkComponent,
     ClientCountComponent,
     FooterComponent,
-    RouterOutlet],
+    RouterOutlet,
+   RouterModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router} from '@angular/router';
+
 
 @Component({
   selector: 'app-header',
@@ -6,6 +8,15 @@ import { Component } from '@angular/core';
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
-export class HeaderComponent {
 
+
+export class HeaderComponent {
+  constructor(private router: Router){}
+
+  ngOnInit() {}
+
+  addAccount(){
+    this.router.navigate(["/my-account"]);
+
+  }
 }
