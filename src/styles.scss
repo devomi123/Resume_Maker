@@ -16,6 +16,7 @@ $font-size: 14px;
 $bgColor: #3b2b92;
 $iconColor: #f155ff;
 $iconColorHover: #f47bff;
+$font-family :auto;
 
 .checkedStar {
   color: $star-color;
@@ -51,4 +52,7 @@ $iconColorHover: #f47bff;
 
 .kt-pointer {
   cursor: pointer
+}
+.font-Arial{
+ font-family:Arial, Helvetica, sans-serif;
 }

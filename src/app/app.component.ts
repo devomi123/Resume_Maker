@@ -6,6 +6,7 @@ import { CreateOptionComponent } from './view/create-option/create-option.compon
 import { UeserNetworkComponent } from './view/ueser-network/ueser-network.component';
 import { ClientCountComponent } from './view/client-count/client-count.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { LoginComponent } from './view/inner-component/login/login.component';
 @Component({
   selector: 'app-root',
   imports: [HeaderComponent,
@@ -14,7 +15,7 @@ import { FooterComponent } from './shared/footer/footer.component';
     UeserNetworkComponent,
     ClientCountComponent,
     FooterComponent,
-    RouterOutlet,
+    LoginComponent,
    RouterModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
