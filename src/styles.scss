@@ -15,8 +15,9 @@ $star-color: orange;
 $font-size: 14px;
 $bgColor: #3b2b92;
 $iconColor: #f155ff;
-$iconColorHover: #f47bff;
+$iconColorHover: #B771E5;
 $font-family :auto;
+$btn-textColor:#B771E5;
 
 .checkedStar {
   color: $star-color;
@@ -55,4 +56,7 @@ $font-family :auto;
 }
 .font-Arial{
  font-family:Arial, Helvetica, sans-serif;
+}
+.btntextColor{
+  color: $btn-textColor;
 }
