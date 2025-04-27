@@ -11,7 +11,8 @@ const routes: Routes = [
       //   loadComponent: () =>
       //   import('./my-account/my-account.component').then(m => m.MyAccountComponent),
       // },
-      {path :'my-account' ,component:MyAccountComponent}
+      {path :'my-account' ,component:MyAccountComponent},
+      {path :'ogin' ,component:MyAccountComponent}
     ]
 
     }
@@ -19,7 +20,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
 export class InnerRoutingModule {}

@@ -7,15 +7,19 @@ import { UeserNetworkComponent } from './view/ueser-network/ueser-network.compon
 import { ClientCountComponent } from './view/client-count/client-count.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { LoginComponent } from './view/inner-component/login/login.component';
+import { MainDashboardComponent } from './shared/main-dashboard/main-dashboard.component';
 @Component({
   selector: 'app-root',
-  imports: [HeaderComponent,
-    DashboardAddResumeComponent,
-    CreateOptionComponent,
-    UeserNetworkComponent,
-    ClientCountComponent,
+  imports: [
+    HeaderComponent,
+    // DashboardAddResumeComponent,
+    // CreateOptionComponent,
+    // UeserNetworkComponent,
+    // ClientCountComponent,
     FooterComponent,
-    LoginComponent,
+    // LoginComponent,
+     MainDashboardComponent,
+
    RouterModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
