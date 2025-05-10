@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router} from '@angular/router';
 
 
@@ -10,14 +10,15 @@ import { Router} from '@angular/router';
 })
 
 
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
   constructor(private router: Router){}
-
+  isHeader:boolean = true;
   ngOnInit() {}
 
   addAccount(){
-    this.router.navigate(["/innerpages/my-account"]);
-
+    this.router.navigate(["/innerpages/login"]);
+    this.isHeader = false;
+    sessionStorage.setItem('isHeadFoot', String(this.isHeader))
   }
 
   homepage(){

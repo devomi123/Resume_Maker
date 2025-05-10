@@ -10,7 +10,7 @@ const routes: Routes = [
     loadChildren: () =>
       import("./view/inner-component/inner-pages.module").then((c) => c.InnerPagesModule),
   },
-  { path:'', component:MainDashboardComponent}
+  { path:"", component:MainDashboardComponent}
 ];
 
 @NgModule({
