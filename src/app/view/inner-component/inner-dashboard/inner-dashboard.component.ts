@@ -14,6 +14,6 @@ export class InnerDashboardComponent implements OnInit {
   }
 
   createResume() {
-    // this.route.navigate(['innerpages/inner-dashboard'])
+    this.route.navigate(['innerpages/resume-dashboard'])
   }
 }

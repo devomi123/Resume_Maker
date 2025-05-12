@@ -17,7 +17,7 @@ const routes: Routes = [
       {path :'my-account' ,component:MyAccountComponent},
       {path :'login' ,component:LoginComponent},
       {path :'dashboard' ,component:InnerDashboardComponent},
-      {path :'reume-dashboard' ,component:ResumeDashbordComponent},
+      {path :'resume-dashboard' ,component:ResumeDashbordComponent},
     ]
 
     }
