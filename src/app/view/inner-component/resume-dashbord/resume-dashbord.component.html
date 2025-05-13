@@ -1,6 +1,6 @@
 <div class="container mt-5">
   <div class="row">
-    <div class="col-md-12 d-flex gap-3">
+    <div class="col-md-12 d-flex gap-3"(click)="createResume()" >
       <div class="col-md-6 kt-pointer h-100 createResumeScratch">
         <div class=" centerClass">
           <img class="useImage " src="../../../../assets/images/Use Your Resume.png" alt="">
@@ -18,7 +18,7 @@
           </p>
         </div>
       </div>
-      <div class="col-md-6 h-100  kt-pointer createResumeScratch">
+      <div class="col-md-6 h-100  kt-pointer createResumeScratch" (click)="createResume()" >
         <div class=" centerClass">
           <img class="useImage " src="../../../../assets/images/Create from Scratch.png" alt="">
         </div>
