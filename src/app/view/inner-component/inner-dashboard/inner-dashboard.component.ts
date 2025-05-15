@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-inner-dashboard',
   imports: [],
+  // standalone: false,
   templateUrl: './inner-dashboard.component.html',
   styleUrl: './inner-dashboard.component.scss'
 })

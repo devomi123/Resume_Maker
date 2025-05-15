@@ -11,7 +11,8 @@ import { InnerDashboardComponent } from './inner-dashboard/inner-dashboard.compo
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+  ],
   imports: [
     CommonModule,
     MyAccountComponent,
