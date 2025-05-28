@@ -13,7 +13,9 @@ import { Router} from '@angular/router';
 export class HeaderComponent implements OnInit {
   constructor(private router: Router){}
   isHeader:boolean = true;
-  ngOnInit() {}
+  ngOnInit() {
+    sessionStorage.setItem('isHeadFoot', String(this.isHeader))
+  }
 
   addAccount(){
     this.router.navigate(["/innerpages/login"]);
@@ -23,5 +25,8 @@ export class HeaderComponent implements OnInit {
 
   homepage(){
     this.router.navigate([""]);
+    this.isHeader = true;
+    sessionStorage.setItem('isHeadFoot', String(this.isHeader))
+
   }
 }

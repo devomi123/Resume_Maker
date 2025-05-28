@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { UeserNetworkComponent } from './ueser-network.component';
+import { ExperienceInfoComponent } from './experience-info.component';
 
-describe('UeserNetworkComponent', () => {
-  let component: UeserNetworkComponent;
-  let fixture: ComponentFixture<UeserNetworkComponent>;
+describe('ExperienceInfoComponent', () => {
+  let component: ExperienceInfoComponent;
+  let fixture: ComponentFixture<ExperienceInfoComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [UeserNetworkComponent]
+      imports: [ExperienceInfoComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(UeserNetworkComponent);
+    fixture = TestBed.createComponent(ExperienceInfoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

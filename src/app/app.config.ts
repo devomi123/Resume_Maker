@@ -6,11 +6,12 @@ import Aura from '@primeng/themes/aura';
 import { routes } from './app.routes';
 import { BrowserModule, provideClientHydration, withEventReplay } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
-
+import { provideAnimations } from '@angular/platform-browser/animations';
 export const appConfig: ApplicationConfig = {
   providers: [provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes), provideClientHydration(withEventReplay()),
     provideAnimationsAsync(),importProvidersFrom(BrowserModule, AppRoutingModule ),
-    providePrimeNG({ theme: { preset: Aura } })]
+    providePrimeNG({ theme: { preset: Aura } }),
+    provideAnimations()]
 
 };

@@ -4,3 +4,12 @@
 .loginbtn{
   background-color: #3b2b92;
 }
+#passwordPrime{
+width: 32pc !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .passwordPrime{
+    width: 100%!important;
+    }
+}

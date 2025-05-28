@@ -1,14 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterModule, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './shared/header/header.component';
-import { DashboardAddResumeComponent } from './view/dashboard-add-resume/dashboard-add-resume.component';
-import { CreateOptionComponent } from './view/create-option/create-option.component';
-import { UeserNetworkComponent } from './view/ueser-network/ueser-network.component';
-import { ClientCountComponent } from './view/client-count/client-count.component';
 import { FooterComponent } from './shared/footer/footer.component';
-import { LoginComponent } from './view/inner-component/login/login.component';
-import { MainDashboardComponent } from './shared/main-dashboard/main-dashboard.component';
-import { MyAccountComponent } from './view/inner-component/my-account/my-account.component';
 import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-root',
@@ -22,22 +15,29 @@ import { CommonModule } from '@angular/common';
 })
 export class AppComponent {
   title = 'resume_maker';
+  _activeFlag = true;
   ngOnInit() {
-
-
-  console.log(
-    window.location.origin
-  );
+    this._activeFlag = true
+    this.getActiveFlag();
   }
   getActiveFlag(): boolean {
     let _activeFlag
-    if(window.location.origin == 'http://localhost:4200'){
-      _activeFlag = true
-    }
-    _activeFlag= JSON.parse(String(sessionStorage.getItem('isHeadFoot')))
-    console.log(_activeFlag );
+    let styleUrl = window.location.pathname;
+    console.log(styleUrl);
 
-    return _activeFlag == null ?false:false
+    if (styleUrl == '/innerpages/login' || styleUrl == '/innerpages/my-account' || styleUrl == '/innerpages/resume-creation') {
+      sessionStorage.setItem('isHeaderFoot', 'false')
+      return _activeFlag = false
+    }
+
+    else if (styleUrl == null) {
+      sessionStorage.setItem('isHeaderFoot', 'true')
+
+      return _activeFlag = true;
+    }
+    else {
+      return _activeFlag = JSON.parse(String(sessionStorage.getItem('isHeadFoot')))
+    }
   }
 }
 
