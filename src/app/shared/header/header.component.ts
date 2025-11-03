@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router} from '@angular/router';
+import { StorageService } from '../../core/services/sessionStorage.service';
 
 
 @Component({
@@ -11,22 +12,22 @@ import { Router} from '@angular/router';
 
 
 export class HeaderComponent implements OnInit {
-  constructor(private router: Router){}
+  constructor(private router: Router,private sessionstorageservice: StorageService){}
   isHeader:boolean = true;
   ngOnInit() {
-    sessionStorage.setItem('isHeadFoot', String(this.isHeader))
+    this.sessionstorageservice.setItem('isHeadFoot', String(this.isHeader))
   }
 
   addAccount(){
     this.router.navigate(["/innerpages/login"]);
     this.isHeader = false;
-    sessionStorage.setItem('isHeadFoot', String(this.isHeader))
+    this.sessionstorageservice.setItem('isHeadFoot', String(this.isHeader))
   }
 
   homepage(){
     this.router.navigate([""]);
     this.isHeader = true;
-    sessionStorage.setItem('isHeadFoot', String(this.isHeader))
+    this.sessionstorageservice.setItem('isHeadFoot', String(this.isHeader))
 
   }
 }

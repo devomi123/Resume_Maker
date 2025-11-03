@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
+import { DatePickerModule } from 'primeng/datepicker';
 @Component({
   selector: 'app-experience-info',
-  imports: [],
+  imports: [FormsModule,DatePickerModule],
   templateUrl: './experience-info.component.html',
   styleUrl: './experience-info.component.scss'
 })

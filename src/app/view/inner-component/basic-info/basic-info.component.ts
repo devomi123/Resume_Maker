@@ -1,11 +1,15 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { DatePickerModule } from 'primeng/datepicker';
 @Component({
   selector: 'app-basic-info',
-  imports: [],
+  imports: [DatePickerModule,FormsModule],
   templateUrl: './basic-info.component.html',
   styleUrl: './basic-info.component.scss'
 })
-export class BasicInfoComponent {
+export class BasicInfoComponent implements OnInit {
+  date2:any;
+  ngOnInit(): void {
 
+  }
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { StorageService } from '../../../core/services/sessionStorage.service';
 
 
 // import {FormsModule} from '@angular/forms';
@@ -14,13 +15,14 @@ import { Router } from '@angular/router';
   styleUrl: './my-account.component.scss'
 })
 export class MyAccountComponent implements OnInit {
-  constructor( private router:Router){}
+  constructor( private router:Router,private sessionstorageservice: StorageService){}
  ngOnInit(){
 
  }
 
  login(){
- sessionStorage.setItem('isHeadFoot','true')
+ this.sessionstorageservice.setItem('isHeadFoot','true')
  this.router.navigate(['/'])
  }
+
 }
