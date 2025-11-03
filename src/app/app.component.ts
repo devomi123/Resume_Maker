@@ -1,15 +1,9 @@
 import { Component } from '@angular/core';
 import { RouterModule, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './shared/header/header.component';
-import { DashboardAddResumeComponent } from './view/dashboard-add-resume/dashboard-add-resume.component';
-import { CreateOptionComponent } from './view/create-option/create-option.component';
-import { UeserNetworkComponent } from './view/ueser-network/ueser-network.component';
-import { ClientCountComponent } from './view/client-count/client-count.component';
 import { FooterComponent } from './shared/footer/footer.component';
-import { LoginComponent } from './view/inner-component/login/login.component';
-import { MainDashboardComponent } from './shared/main-dashboard/main-dashboard.component';
-import { MyAccountComponent } from './view/inner-component/my-account/my-account.component';
 import { CommonModule } from '@angular/common';
+import { StorageService } from './core/services/sessionStorage.service';
 @Component({
   selector: 'app-root',
   imports: [
@@ -22,22 +16,32 @@ import { CommonModule } from '@angular/common';
 })
 export class AppComponent {
   title = 'resume_maker';
+  _activeFlag = true;
+  styleUrl:any;
+  constructor(private sessionstorageservice: StorageService) { }
   ngOnInit() {
-
-
-  console.log(
-    window.location.origin
-  );
+    this._activeFlag = true
+    this.getActiveFlag();
   }
   getActiveFlag(): boolean {
     let _activeFlag
-    if(window.location.origin == 'http://localhost:4200'){
-      _activeFlag = true
+    if (typeof window !== 'undefined') {
+     this.styleUrl = window.location.pathname;
     }
-    _activeFlag= JSON.parse(String(sessionStorage.getItem('isHeadFoot')))
-    console.log(_activeFlag );
+    if (this.styleUrl == '/innerpages/login' || this.styleUrl == '/innerpages/my-account' || this.styleUrl == '/innerpages/resume-creation') {
+      this.sessionstorageservice.setItem('isHeaderFoot', 'false')
+      return _activeFlag = false
+    }
+    else if (this.styleUrl == null || "/") {
+      this.sessionstorageservice.setItem('isHeaderFoot', 'true')
+      return _activeFlag = true;
+    }
+    else {
+      return _activeFlag = JSON.parse(String(this.sessionstorageservice.getItem('isHeadFoot')))
+    }
 
-    return _activeFlag == null ?false:false
   }
-}
+  }
+
+
 

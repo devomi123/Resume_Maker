@@ -5,6 +5,7 @@ import { LoginComponent } from "./login/login.component";
 import { InnerDashboardComponent } from "./inner-dashboard/inner-dashboard.component";
 import { ResumeDashbordComponent } from "./resume-dashbord/resume-dashbord.component";
 import { UploadCurrentResumeComponent } from "./upload-current-resume/upload-current-resume.component";
+import { ResumeCrationComponent } from "./resume-cration/resume-cration.component";
 
 const routes: Routes = [
   {
@@ -15,6 +16,7 @@ const routes: Routes = [
       {path :'dashboard' ,component:InnerDashboardComponent},
       {path :'resume-dashboard' ,component:ResumeDashbordComponent},
       {path :'upload-resume' ,component:UploadCurrentResumeComponent},
+      {path :'resume-creation' ,component:ResumeCrationComponent},
     ]
 
     }

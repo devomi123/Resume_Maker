@@ -1,0 +1,55 @@
+<div class="container-fluid">
+
+  <div>
+    <img src="../../../../assets/images/user_attributes.svg" alt=""> <span class="px-3 text-prime fs14">Show case Your
+      Experince</span>
+    <div class="row mt-4 experienceBackground p-3" style="border-radius: 10px;">
+      <div class="col-md-6 mb-3 px-4">
+        <label class="fs14" for="">Job Title</label>
+        <input type="text" class="form-control fs14" placeholder="Job Title" aria-label="Job Title">
+      </div>
+      <div class="col-md-6 mb-3 px-4">
+        <label class="fs14" for="">Employer</label>
+        <input type="text" class="form-control fs14" placeholder="Employer" aria-label="Employer">
+      </div>
+      <div class="col-md-12 mb-3 px-4">
+        <label class="fs14" for="">Location</label>
+        <input type="text" class="form-control fs14" placeholder="Location" aria-label="Location">
+      </div>
+      <div class="col-md-12 d-grid mb-3 px-4">
+        <label class="fs14" for="">Job Description</label>
+        <!-- <input type="text" class="form-control fs14" placeholder="Enter You" aria-label="Location">
+       -->
+        <textarea name="Enter Your Job Description" id="" cols="30" rows="10"></textarea>
+      </div>
+      <div class="col-md-6 d-flex mb-3 px-4 gap-2">
+        <div class=" col-md-3 mb-3 px-4 flex-auto">
+          <label for="icondisplay" class=" fs14 block">Start Date</label>
+          <p-datepicker  [iconDisplay]="'input'" [showIcon]="true" inputId="icondisplay" />
+        </div>
+        <div class=" col-md-3 mb-3 px-4 flex-auto">
+          <label for="icondisplay" class=" fs14 block">End Date</label>
+          <p-datepicker  [iconDisplay]="'input'" [showIcon]="true" inputId="icondisplay" />
+        </div>
+      </div>
+      <div class="col-md-6 d-flex mb-3 px-4 gap-2">
+        <div class=" col-md-3 mb-3 px-4 flex-auto">
+          <label for="icondisplay" class=" fs14 block">Start Date</label>
+          <p-datepicker  [iconDisplay]="'input'" [showIcon]="true" inputId="icondisplay" />
+        </div>
+        <div class=" col-md-3 mb-3 px-4 flex-auto">
+          <label for="icondisplay" class=" fs14 block">End Date</label>
+          <p-datepicker  [iconDisplay]="'input'" [showIcon]="true" inputId="icondisplay" />
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-end">
+        <div>
+          <input type="checkbox"> <span class="fs14"> I currently work here</span>
+        </div>
+      </div>
+      <div class="d-flex justify-content-start">
+     <Button class="btn btn-outline text-black bg-white  btntextColor w-2 resumeBtn">Add</Button>
+      </div>
+    </div>
+  </div>

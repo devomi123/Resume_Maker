@@ -1,8 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
-// @import "primeicons/primeicons.css";
-// @import "primeflex/primeflex.css";
-// "node_modules/primeicons/primeicons.css",
-// "node_modules/primeflex/primeflex.css",
+@import "primeicons/primeicons.css";
+@import "primeflex/primeflex.css";
 html,
 body {
   height: 100%;
@@ -62,4 +60,12 @@ $btn-textColor:#B771E5;
 }
 .btntextColor{
   color: $btn-textColor;
+}
+
+.p-datepicker:has(.p-datepicker-input-icon-container) .p-datepicker-input {
+  height: 36px !important;
+}
+.p-datepicker:has(.p-datepicker-input-icon-container) {
+  position: relative;
+  width: 100% !important;
 }

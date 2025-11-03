@@ -1,0 +1,21 @@
+<mat-dialog-content class="dialog-container">
+  <!-- Styled Header with Close Icon -->
+  <div class="dialog-header">
+    <div>Delete Confirmation</div>
+    <button mat-icon-button class="close-button" (click)="close()">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+
+  <!-- Main Content -->
+  <div class="dialog-content">
+    Are you sure you want to delete <strong>{{ data.itemName }}</strong
+    >?
+  </div>
+</mat-dialog-content>
+
+<!-- Styled Footer with Action Buttons -->
+<mat-dialog-actions class="dialog-footer">
+  <button  class="btn btn-secondary" (click)="close()">Cancel</button>
+  <button class="btn btn-primary" (click)="delete()">Delete</button>
+</mat-dialog-actions>
