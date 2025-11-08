@@ -1,0 +1,10 @@
+export enum  pageRoleNum {
+    BASIC_INFO = 'BASIC_INFO',
+    EDUCATION = 'EDUCATION',
+    EXPERIANCE = 'EXPERIANCE',
+    PROJECTS = 'PROJECTS',
+    SKILLS = 'SKILLS',
+    SUMMARY = 'SUMMARY',
+    WORK_EXPERIENCE = 'WORK_EXPERIENCE',
+  }
+

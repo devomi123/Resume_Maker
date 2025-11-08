@@ -3,20 +3,28 @@ import { TimelineModule } from 'primeng/timeline';
 import { BasicInfoComponent } from "../basic-info/basic-info.component";
 import { ExperienceInfoComponent } from "../experience-info/experience-info.component";
 import { WorkingHistoryComponent } from '../working-history/working-history.component';
+import {pageRoleNum} from '../../../shared/ExtParameter/enum'
 
 import { CommonModule } from '@angular/common';
 import { CommonService } from '../../../core/services/common.service';
+import { AcadmicJournyComponent } from "../acadmic-journy/acadmic-journy.component";
+import { ResumeDashbordComponent } from "../resume-dashbord/resume-dashbord.component";
+import { SkilltoolComponent } from "../skilltool/skilltool.component";
+import { SummaryComponent } from "../summary/summary.component";
+import { ExtrasectionComponent } from "../extrasection/extrasection.component";
 @Component({
   selector: 'app-resume-cration',
-  imports: [TimelineModule, BasicInfoComponent, ExperienceInfoComponent, WorkingHistoryComponent, CommonModule],
+  imports: [TimelineModule, BasicInfoComponent, ExperienceInfoComponent, WorkingHistoryComponent, CommonModule, AcadmicJournyComponent, ResumeDashbordComponent, SkilltoolComponent, SummaryComponent, ExtrasectionComponent],
   templateUrl: './resume-cration.component.html',
   styleUrl: './resume-cration.component.scss'
 })
 export class ResumeCrationComponent implements OnInit {
   constructor(private common: CommonService) { }
-  _isShowWorkExp: boolean = false;
+  _isShowWorkExp:any;
+  clickCount= 0;
+  _isRoleNum :any = pageRoleNum;
   ngOnInit(): void {
-    this.getIsShowworkHistory();
+
   }
   timlineData = [
     {
@@ -54,6 +62,19 @@ export class ResumeCrationComponent implements OnInit {
       this._isShowWorkExp = res;
 
     }))
+
+  // this._isShowWorkExp = sessionStorage.getItem('componentStatus');
+  // console.log(this._isShowWorkExp);
+
+this.clickCount++
+console.log(pageRoleNum.WORK_EXPERIENCE)
+
+console.log(this.clickCount);
+ this._isShowWorkExp = this.clickCount;
+
   }
 
+  previousStep(){
+    this.clickCount--
+  }
 }
