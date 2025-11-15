@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CommonService } from '../../../core/services/common.service';
 
 @Component({
   selector: 'app-extrasection',
@@ -7,5 +8,15 @@ import { Component } from '@angular/core';
   styleUrl: './extrasection.component.scss'
 })
 export class ExtrasectionComponent {
+
+  constructor(private common: CommonService) { }
+  ngoinit(): void {
+
+  }
+
+
+  saveNext(data:any) {
+    this.common._isNextPage.next(data);
+  }
 
 }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CommonService } from '../../../core/services/common.service';
 
 @Component({
   selector: 'app-summary',
@@ -7,5 +8,15 @@ import { Component } from '@angular/core';
   styleUrl: './summary.component.scss'
 })
 export class SummaryComponent {
+
+  constructor(private common: CommonService) { }
+  ngoinit(): void {
+
+  }
+
+
+  saveNext(data:any) {
+    this.common._isNextPage.next(data);
+  }
 
 }

@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { TimelineModule } from 'primeng/timeline';
 import { BasicInfoComponent } from "../basic-info/basic-info.component";
 import { ExperienceInfoComponent } from "../experience-info/experience-info.component";
-import { WorkingHistoryComponent } from '../working-history/working-history.component';
-import {pageRoleNum} from '../../../shared/ExtParameter/enum'
+// import { WorkingHistoryComponent } from '../working-history/working-history.component';
+import { pageRoleNum } from '../../../shared/ExtParameter/enum'
 
 import { CommonModule } from '@angular/common';
 import { CommonService } from '../../../core/services/common.service';
@@ -14,17 +14,21 @@ import { SummaryComponent } from "../summary/summary.component";
 import { ExtrasectionComponent } from "../extrasection/extrasection.component";
 @Component({
   selector: 'app-resume-cration',
-  imports: [TimelineModule, BasicInfoComponent, ExperienceInfoComponent, WorkingHistoryComponent, CommonModule, AcadmicJournyComponent, ResumeDashbordComponent, SkilltoolComponent, SummaryComponent, ExtrasectionComponent],
+  imports: [TimelineModule, BasicInfoComponent, ExperienceInfoComponent, CommonModule, AcadmicJournyComponent, SkilltoolComponent, SummaryComponent, ExtrasectionComponent],
   templateUrl: './resume-cration.component.html',
   styleUrl: './resume-cration.component.scss'
 })
 export class ResumeCrationComponent implements OnInit {
   constructor(private common: CommonService) { }
-  _isShowWorkExp:any;
-  clickCount= 0;
-  _isRoleNum :any = pageRoleNum;
+  _isShowWorkExp: any;
+  clickCount = 0;
+  _isRoleNum: any = pageRoleNum;
+  _pageText: any;
   ngOnInit(): void {
-
+    this.common._isNextPage.subscribe((res => {
+      this._pageText = res;
+      console.log(res);
+    }))
   }
   timlineData = [
     {
@@ -63,18 +67,17 @@ export class ResumeCrationComponent implements OnInit {
 
     }))
 
-  // this._isShowWorkExp = sessionStorage.getItem('componentStatus');
-  // console.log(this._isShowWorkExp);
+    this.clickCount++
+    console.log(pageRoleNum.WORK_EXPERIENCE)
 
-this.clickCount++
-console.log(pageRoleNum.WORK_EXPERIENCE)
-
-console.log(this.clickCount);
- this._isShowWorkExp = this.clickCount;
+    console.log(this.clickCount);
+    this._isShowWorkExp = this.clickCount;
 
   }
 
-  previousStep(){
+  previousStep() {
     this.clickCount--
   }
+
+
 }

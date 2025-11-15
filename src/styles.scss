@@ -19,7 +19,7 @@ $bgColor: #3b2b92;
 $iconColor: #f155ff;
 $iconColorHover: #B771E5;
 $font-family :auto;
-$btn-textColor:#B771E5;
+$btn-textColor:#08040a;
 
 .checkedStar {
   color: $star-color;
@@ -61,6 +61,7 @@ $btn-textColor:#B771E5;
 }
 .btntextColor{
   color: $btn-textColor;
+  border-radius: 19px;
 }
 
 .p-datepicker:has(.p-datepicker-input-icon-container) .p-datepicker-input {
