@@ -6,6 +6,7 @@ import { CommonService } from '../../../core/services/common.service';
 import { catchError, map } from 'rxjs';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { StorageService } from '../../../core/services/sessionStorage.service';
+import { ToastrAlertService } from '../../../core/services/toaster.service';
 
 // import { ButtonModule } from 'primeng/button';
 @Component({
@@ -19,7 +20,7 @@ export class LoginComponent implements OnInit {
   isHeader = false;
   loginForm: any;
   constructor(private route: Router, private fb: FormBuilder, private http: HttpClient, private common: CommonService,
-    private sessionstorageservice:StorageService) { }
+    private sessionstorageservice:StorageService , private toaster:ToastrAlertService) { }
   ngOnInit() {
     this.createLoginForm();
     this.getUser();
@@ -66,7 +67,7 @@ userLogin(){
   this.common.userLogin(userDetails).subscribe((res:any)=>{
     if(res.statusCode == 200){
       console.log(res);
-      alert(res.message)
+      this.toaster.showSuccess(res.message)
       this.isHeader = true;
       this.sessionstorageservice.setItem('isHeadFoot', String(this.isHeader))
       this.route.navigate(['innerpages/dashboard'])

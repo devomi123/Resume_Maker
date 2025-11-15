@@ -15,8 +15,11 @@ ngOnInit(): void {
 }
 
 addNewExperience(){
-// this._isAddExp = true;
+this._isAddExp = true;
 this.common._isAddExp.next(true)
+}
+saveNext(){
+  this.common._isNextPage.next(2);
 }
 
 }

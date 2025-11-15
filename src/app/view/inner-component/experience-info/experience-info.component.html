@@ -49,7 +49,17 @@
         </div>
       </div>
       <div class="d-flex justify-content-start">
-     <Button class="btn btn-outline text-black bg-white  btntextColor w-2 resumeBtn">Add</Button>
+     <Button class="btn btn-outline text-black bg-white iconColorHover  btntextColor w-2 resumeBtn">Add</Button>
+      </div>
+    </div>
+    <div class="d-flex justify-content-center">
+
+      <div class="d-flex justify-content-start mt-5  px-6 gap-3">
+        <button type="button" class="btn btn-outline iconColorHover btntextColor mt-3   bt-5 resumeBtn"(click)="previousPage()">Back</button>
+      </div>
+      <div class="d-flex justify-content-end mt-5 gap-3">
+        <button type="button" class="btn btn-outline iconColorHover btntextColor mt-3 bt-5 resumeBtn">Preview</button>
+        <button type="button" class="btn btn-outline iconColorHover btntextColor mt-3 bt-5 resumeBtn" (click)="saveNext('Education')" >Save and Next</button>
       </div>
     </div>
   </div>

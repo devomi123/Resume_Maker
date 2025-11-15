@@ -12,6 +12,7 @@ export class CommonService {
 
   _isHeader = new BehaviorSubject<boolean>(false);
   _isAddExp = new BehaviorSubject<boolean>(false);
+  _isNextPage= new BehaviorSubject<any>(0);
 
 
   createUsrList(data:any): Observable<any> {

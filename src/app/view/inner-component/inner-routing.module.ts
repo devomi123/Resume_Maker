@@ -17,6 +17,7 @@ const routes: Routes = [
       {path :'resume-dashboard' ,component:ResumeDashbordComponent},
       {path :'upload-resume' ,component:UploadCurrentResumeComponent},
       {path :'resume-creation' ,component:ResumeCrationComponent},
+
     ]
 
     }

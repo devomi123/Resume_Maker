@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import "primeicons/primeicons.css";
 @import "primeflex/primeflex.css";
+@import 'ngx-toastr/toastr';
 html,
 body {
   height: 100%;
@@ -18,7 +19,7 @@ $bgColor: #3b2b92;
 $iconColor: #f155ff;
 $iconColorHover: #B771E5;
 $font-family :auto;
-$btn-textColor:#B771E5;
+$btn-textColor:#08040a;
 
 .checkedStar {
   color: $star-color;
@@ -60,6 +61,7 @@ $btn-textColor:#B771E5;
 }
 .btntextColor{
   color: $btn-textColor;
+  border-radius: 19px;
 }
 
 .p-datepicker:has(.p-datepicker-input-icon-container) .p-datepicker-input {
@@ -69,3 +71,30 @@ $btn-textColor:#B771E5;
   position: relative;
   width: 100% !important;
 }
+    /* style.css */
+
+    /* Customize the main toast container */
+    .toast-container {
+      top: 20px;
+      right: 20px;
+      width: 350px;
+  }
+
+  /* Style for success toasts */
+  .toast-success {
+      background-color: #4CAF50; /* Green background */
+      color: white;
+      border-radius: 8px;
+      padding: 15px;
+  }
+
+  /* Style for toast titles */
+  .toast-title {
+      font-weight: bold;
+      font-size: 1.2em;
+  }
+
+  /* Style for toast messages */
+  .toast-message {
+      font-size: 1em;
+  }

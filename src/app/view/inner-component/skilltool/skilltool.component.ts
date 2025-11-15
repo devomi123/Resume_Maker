@@ -2,20 +2,20 @@ import { Component } from '@angular/core';
 import { CommonService } from '../../../core/services/common.service';
 
 @Component({
-  selector: 'app-acadmic-journy',
+  selector: 'app-skilltool',
   imports: [],
-  templateUrl: './acadmic-journy.component.html',
-  styleUrl: './acadmic-journy.component.scss'
+  templateUrl: './skilltool.component.html',
+  styleUrl: './skilltool.component.scss'
 })
-export class AcadmicJournyComponent {
-
+export class SkilltoolComponent {
   constructor(private common: CommonService) { }
   ngoinit(): void {
 
   }
 
 
-  saveNext(data:string) {
+  saveNext(data:any) {
+    alert(data)
     this.common._isNextPage.next(data);
   }
 

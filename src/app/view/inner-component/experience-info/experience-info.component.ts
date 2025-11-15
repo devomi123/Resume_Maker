@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { DatePickerModule } from 'primeng/datepicker';
+import { CommonService } from '../../../core/services/common.service';
 @Component({
   selector: 'app-experience-info',
   imports: [FormsModule,DatePickerModule],
@@ -8,5 +9,19 @@ import { DatePickerModule } from 'primeng/datepicker';
   styleUrl: './experience-info.component.scss'
 })
 export class ExperienceInfoComponent {
+
+constructor( private common:CommonService){}
+
+ngoninit(){
+
+
+}
+
+saveNext(data:any){
+  this.common._isNextPage.next(data)
+}
+previousPage(){
+
+}
 
 }

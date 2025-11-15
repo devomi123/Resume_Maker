@@ -4,13 +4,16 @@ import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { CommonModule } from '@angular/common';
 import { StorageService } from './core/services/sessionStorage.service';
+import { ToastrModule } from 'ngx-toastr';
 @Component({
   selector: 'app-root',
   imports: [
     HeaderComponent,
     FooterComponent,
     CommonModule,
-    RouterModule],
+    RouterModule,
+    ToastrModule
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

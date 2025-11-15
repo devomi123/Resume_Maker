@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { CommonService } from '../../../core/services/common.service';
 
 @Component({
-  selector: 'app-acadmic-journy',
+  selector: 'app-extrasection',
   imports: [],
-  templateUrl: './acadmic-journy.component.html',
-  styleUrl: './acadmic-journy.component.scss'
+  templateUrl: './extrasection.component.html',
+  styleUrl: './extrasection.component.scss'
 })
-export class AcadmicJournyComponent {
+export class ExtrasectionComponent {
 
   constructor(private common: CommonService) { }
   ngoinit(): void {
@@ -15,7 +15,7 @@ export class AcadmicJournyComponent {
   }
 
 
-  saveNext(data:string) {
+  saveNext(data:any) {
     this.common._isNextPage.next(data);
   }
 
